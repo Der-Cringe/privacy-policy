@@ -61,13 +61,45 @@
 
 <h2>2. Lokal gespeicherte Daten</h2>
 <p>
-  Alle Daten, die Sie in der App eingeben – darunter Pflanzennamen, Gießintervalle,
-  Pflegenotizen, Fotos und Protokolleinträge – werden ausschließlich lokal auf
-  Ihrem Gerät gespeichert. Es findet keine Übertragung dieser Daten an externe
-  Server oder Dritte statt.
+  Alle persönlichen Pflegedaten – darunter Pflanzennamen, Gießintervalle,
+  Pflegenotizen und Protokolleinträge – werden ausschließlich lokal auf
+  Ihrem Gerät gespeichert. Eigene Pflanzenfotos verbleiben ebenfalls auf
+  Ihrem Gerät, sofern Sie die unten beschriebenen Cloud-Funktionen nicht nutzen.
 </p>
 
-<h2>3. In-App-Käufe (RevenueCat)</h2>
+<h2>3. Cloud-Funktionen (Supabase)</h2>
+<p>
+  Bestimmte Funktionen der App erfordern die Übertragung von Daten an unsere
+  Cloud-Infrastruktur, betrieben über <strong>Supabase</strong>
+  (Supabase, Inc., San Francisco, USA). Dies betrifft:
+</p>
+<ul>
+  <li>
+    <strong>Gruppen-Funktion:</strong> Wenn Sie eine Gruppe erstellen oder einer
+    Gruppe beitreten, werden Gruppenname, Mitgliedernamen sowie Pflanzendaten der
+    Gruppe auf unseren Servern gespeichert, um die gemeinsame Pflege zu ermöglichen.
+    Gruppencover-Bilder werden im Supabase-Dateispeicher abgelegt.
+  </li>
+  <li>
+    <strong>Pflanzensitting:</strong> Wenn Sie eine Sitting-Session erstellen oder
+    an einer teilnehmen, werden die freigegebenen Pflanzendaten sowie der
+    Gießstatus vorübergehend auf unseren Servern gespeichert.
+    Die Daten werden nach Ablauf der Session automatisch gelöscht.
+  </li>
+  <li>
+    <strong>Pflanzenerkennung – unbekannte Arten:</strong> Wenn das Pro-Feature
+    „Pflanze bestimmen" eine Pflanze erkennt, für die noch kein Template in der App
+    vorhanden ist, werden ausschließlich botanische Metadaten (wissenschaftlicher
+    Name, Erkennungswahrscheinlichkeit) in unserer Datenbank gespeichert.
+    Es werden dabei keine Bilder und keine personenbezogenen Daten übertragen.
+  </li>
+</ul>
+<p>
+  Supabase verarbeitet Daten in der EU (Frankfurt) und ist DSGVO-konform.
+  Weitere Informationen: <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>
+</p>
+
+<h2>4. In-App-Käufe (RevenueCat)</h2>
 <p>
   Für die Verwaltung von In-App-Käufen und Abonnements (LeafPlan Pro) nutzt die
   App den Dienst <strong>RevenueCat</strong> der RevenueCat, Inc. (San Francisco,
@@ -77,43 +109,58 @@
   ausschließlich über den Apple App Store.
 </p>
 <p>
-  Weitere Informationen zur Datenverarbeitung durch RevenueCat finden Sie unter:<br>
-  <a href="https://www.revenuecat.com/privacy" target="_blank">www.revenuecat.com/privacy</a>
+  Weitere Informationen: <a href="https://www.revenuecat.com/privacy" target="_blank">www.revenuecat.com/privacy</a>
 </p>
 
-<h2>4. Benachrichtigungen</h2>
+<h2>5. Benachrichtigungen</h2>
 <p>
   Die App kann Push-Benachrichtigungen senden, um Sie an anstehende
-  Pflegeaktionen zu erinnern. Hierfür wird ein gerätespezifisches
-  Benachrichtigungs-Token von Apple generiert und lokal verwendet.
-  Die Benachrichtigungen werden ausschließlich lokal auf Ihrem Gerät geplant
-  und ausgelöst; es werden keine Daten an externe Server übertragen.
-  Sie können Benachrichtigungen jederzeit in den iOS-Einstellungen deaktivieren.
+  Pflegeaktionen zu erinnern. Die Benachrichtigungen werden ausschließlich
+  lokal auf Ihrem Gerät geplant und ausgelöst; es werden keine Daten an
+  externe Server übertragen. Sie können Benachrichtigungen jederzeit in
+  den iOS-Einstellungen deaktivieren.
 </p>
 
-<h2>5. Kamera und Fotobibliothek</h2>
+<h2>6. Kamera, Fotobibliothek und automatische Pflanzenerkennung</h2>
 <p>
-  Wenn Sie ein eigenes Foto für eine Pflanze hinzufügen möchten, fragt die App
-  optional nach Zugriff auf Ihre Kamera oder Fotobibliothek. Diese Berechtigung
-  ist freiwillig – die App funktioniert vollständig auch ohne sie.
-  Aufgenommene oder ausgewählte Fotos werden ausschließlich lokal auf Ihrem
-  Gerät gespeichert und nicht weitergegeben.
+  Die App kann optional auf Kamera und Fotobibliothek zugreifen, um eigene
+  Fotos für Pflanzen hinzuzufügen. Diese Berechtigung ist freiwillig.
 </p>
-
-<h2>6. Keine Weitergabe an Dritte</h2>
 <p>
-  Personenbezogene Daten werden nicht ohne Ihre ausdrückliche Einwilligung an
-  Dritte weitergegeben. Ausgenommen hiervon sind die in Abschnitt 3 beschriebene
-  technisch notwendige Übertragung von Kaufinformationen an RevenueCat sowie
-  gesetzlich vorgeschriebene Weitergaben.
+  Das Pro-Feature <strong>„Pflanze bestimmen"</strong> ermöglicht die automatische
+  Erkennung einer Pflanze anhand eines Fotos. Dabei wird das aufgenommene Bild
+  an den Dienst <strong>Pl@ntNet</strong> übertragen, betrieben von öffentlichen
+  französischen Forschungsinstituten (CIRAD, INRAE, INRIA, IRD). Das Bild wird
+  ausschließlich zur Bestimmung der Pflanzenart verwendet und anschließend nicht
+  dauerhaft gespeichert. Diese Funktion wird nur bei aktiver Nutzung ausgeführt
+  – niemals automatisch im Hintergrund.
+</p>
+<p>
+  Pl@ntNet ist DSGVO-konform (Serverstandort: Frankreich).<br>
+  Weitere Informationen: <a href="https://plantnet.org/en/privacy-policy/" target="_blank">plantnet.org/en/privacy-policy</a>
 </p>
 
-<h2>7. Ihre Rechte nach DSGVO</h2>
+<h2>7. Weitergabe an Dritte</h2>
+<p>
+  Eine Weitergabe personenbezogener Daten an Dritte findet nur in den folgenden
+  technisch notwendigen Fällen statt:
+</p>
+<ul>
+  <li>Kaufinformationen an RevenueCat (Abschnitt 4)</li>
+  <li>Gruppenname und Pflanzendaten an Supabase bei Nutzung der Gruppen- und Sitting-Funktion (Abschnitt 3)</li>
+  <li>Pflanzenfoto an Pl@ntNet bei aktiver Nutzung der automatischen Pflanzenerkennung (Abschnitt 6)</li>
+</ul>
+<p>
+  Darüber hinaus erfolgt keine Weitergabe ohne Ihre ausdrückliche Einwilligung,
+  außer bei gesetzlich vorgeschriebenen Übermittlungen.
+</p>
+
+<h2>8. Ihre Rechte nach DSGVO</h2>
 <p>Als Nutzer stehen Ihnen folgende Rechte zu:</p>
 <ul>
   <li><strong>Auskunft</strong> – Sie können jederzeit Auskunft über die Sie betreffenden gespeicherten Daten verlangen.</li>
   <li><strong>Berichtigung</strong> – Sie können die Berichtigung unrichtiger Daten verlangen.</li>
-  <li><strong>Löschung</strong> – Sie können die Löschung Ihrer Daten verlangen. Da alle Daten lokal auf Ihrem Gerät liegen, genügt hierfür die Deinstallation der App.</li>
+  <li><strong>Löschung</strong> – Sie können die Löschung Ihrer Daten verlangen. Lokale Daten werden durch Deinstallation der App gelöscht. Cloud-Daten (Gruppen, Sitting) werden auf Anfrage gelöscht.</li>
   <li><strong>Einschränkung der Verarbeitung</strong> – Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</li>
   <li><strong>Widerspruch</strong> – Sie können der Verarbeitung Ihrer Daten widersprechen.</li>
   <li><strong>Beschwerderecht</strong> – Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.</li>
@@ -123,22 +170,22 @@
   <a href="mailto:flxperimentel.contact@gmail.com">flxperimentel.contact@gmail.com</a>
 </p>
 
-<h2>8. Datensicherheit</h2>
+<h2>9. Datensicherheit</h2>
 <p>
-  Da alle Nutzerdaten ausschließlich lokal auf Ihrem Gerät gespeichert werden,
-  liegt der Schutz dieser Daten in erster Linie in der Sicherheit Ihres Geräts.
-  Wir empfehlen, Ihr Gerät mit einem Zugangscode zu schützen und regelmäßige
-  iOS-Updates durchzuführen.
+  Lokal gespeicherte Daten werden durch die Sicherheitsmechanismen Ihres Geräts
+  geschützt. Wir empfehlen, Ihr Gerät mit einem Zugangscode zu sichern und
+  iOS-Updates regelmäßig durchzuführen. Daten, die über Cloud-Dienste (Supabase)
+  übertragen werden, sind während der Übertragung TLS-verschlüsselt.
 </p>
 
-<h2>9. Änderungen dieser Datenschutzerklärung</h2>
+<h2>10. Änderungen dieser Datenschutzerklärung</h2>
 <p>
   Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren.
   Über wesentliche Änderungen werden Sie innerhalb der App informiert.
   Das Datum der letzten Aktualisierung ist oben angegeben.
 </p>
 
-<h2>10. Kontakt</h2>
+<h2>11. Kontakt</h2>
 <p>
   Bei Fragen zum Datenschutz kontaktieren Sie uns unter:<br>
   <a href="mailto:flxperimentel.contact@gmail.com">flxperimentel.contact@gmail.com</a>
@@ -172,12 +219,41 @@
 
 <h2>2. Locally Stored Data</h2>
 <p>
-  All data you enter in the app – including plant names, watering intervals,
-  care notes, photos, and log entries – is stored exclusively on your device.
-  None of this data is transmitted to external servers or third parties.
+  All personal care data – including plant names, watering intervals, care notes,
+  and log entries – is stored exclusively on your device. Plant photos you add
+  also remain on your device, unless you use the cloud features described below.
 </p>
 
-<h2>3. In-App Purchases (RevenueCat)</h2>
+<h2>3. Cloud Features (Supabase)</h2>
+<p>
+  Certain features of the app require data to be transmitted to our cloud
+  infrastructure, operated via <strong>Supabase</strong>
+  (Supabase, Inc., San Francisco, USA). This includes:
+</p>
+<ul>
+  <li>
+    <strong>Groups feature:</strong> When you create or join a group, the group
+    name, member names, and shared plant data are stored on our servers to enable
+    collaborative plant care. Group cover images are stored in Supabase file storage.
+  </li>
+  <li>
+    <strong>Plant Sitting:</strong> When you create or join a sitting session,
+    the shared plant data and watering status are temporarily stored on our servers.
+    Data is automatically deleted after the session expires.
+  </li>
+  <li>
+    <strong>Plant identification – unknown species:</strong> When the Pro feature
+    "Identify plant" recognises a plant for which no template exists in the app,
+    only botanical metadata (scientific name, confidence score) is stored in our
+    database. No images or personal data are transmitted in this case.
+  </li>
+</ul>
+<p>
+  Supabase processes data in the EU (Frankfurt) and is GDPR-compliant.
+  More information: <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>
+</p>
+
+<h2>4. In-App Purchases (RevenueCat)</h2>
 <p>
   To manage in-app purchases and subscriptions (LeafPlan Pro), the app uses
   <strong>RevenueCat</strong>, a service provided by RevenueCat, Inc.
@@ -187,40 +263,56 @@
   handled exclusively by the Apple App Store.
 </p>
 <p>
-  For more information on how RevenueCat processes data, please visit:<br>
-  <a href="https://www.revenuecat.com/privacy" target="_blank">www.revenuecat.com/privacy</a>
+  More information: <a href="https://www.revenuecat.com/privacy" target="_blank">www.revenuecat.com/privacy</a>
 </p>
 
-<h2>4. Push Notifications</h2>
+<h2>5. Push Notifications</h2>
 <p>
   The app may send push notifications to remind you of upcoming care tasks.
-  For this purpose, Apple generates a device-specific notification token that
-  is used locally. Notifications are scheduled and triggered exclusively on
-  your device; no data is transmitted to external servers.
+  Notifications are scheduled and triggered exclusively on your device;
+  no data is transmitted to external servers.
   You can disable notifications at any time in your iOS Settings.
 </p>
 
-<h2>5. Camera and Photo Library</h2>
+<h2>6. Camera, Photo Library, and Automatic Plant Identification</h2>
 <p>
-  If you wish to add a custom photo for a plant, the app will optionally request
-  access to your camera or photo library. This permission is voluntary – the app
-  works fully without it. Any photos taken or selected are stored exclusively
-  on your device and are not shared with anyone.
+  The app may optionally request access to your camera or photo library to add
+  custom photos for your plants. This permission is entirely voluntary.
+</p>
+<p>
+  The Pro feature <strong>"Identify plant"</strong> enables automatic identification
+  of a plant from a photo. The captured image is transmitted to <strong>Pl@ntNet</strong>,
+  a service operated by French public research institutions (CIRAD, INRAE, INRIA,
+  IRD). The image is used solely to determine the plant species and is not stored
+  permanently afterwards. This feature is only triggered when actively used by you
+  – never automatically in the background.
+</p>
+<p>
+  Pl@ntNet is GDPR-compliant (server location: France).<br>
+  More information: <a href="https://plantnet.org/en/privacy-policy/" target="_blank">plantnet.org/en/privacy-policy</a>
 </p>
 
-<h2>6. No Sharing With Third Parties</h2>
+<h2>7. Sharing With Third Parties</h2>
 <p>
-  Personal data is not shared with third parties without your explicit consent,
-  except for the technically necessary transmission of purchase information to
-  RevenueCat as described in Section 3, and any disclosures required by law.
+  Personal data is only shared with third parties in the following technically
+  necessary cases:
+</p>
+<ul>
+  <li>Purchase information with RevenueCat (Section 4)</li>
+  <li>Group name and plant data with Supabase when using the Groups and Sitting features (Section 3)</li>
+  <li>Plant photo with Pl@ntNet when actively using the automatic plant identification feature (Section 6)</li>
+</ul>
+<p>
+  No further sharing takes place without your explicit consent, except where
+  required by law.
 </p>
 
-<h2>7. Your Rights</h2>
+<h2>8. Your Rights</h2>
 <p>As a user, you have the following rights:</p>
 <ul>
   <li><strong>Access</strong> – You may request information about the personal data stored about you.</li>
   <li><strong>Rectification</strong> – You may request the correction of inaccurate data.</li>
-  <li><strong>Erasure</strong> – You may request the deletion of your data. Since all data is stored locally on your device, uninstalling the app is sufficient.</li>
+  <li><strong>Erasure</strong> – You may request the deletion of your data. Local data is deleted by uninstalling the app. Cloud data (groups, sitting) will be deleted upon request.</li>
   <li><strong>Restriction</strong> – You may request that the processing of your data be restricted.</li>
   <li><strong>Objection</strong> – You may object to the processing of your data.</li>
   <li><strong>Complaint</strong> – You have the right to lodge a complaint with a data protection supervisory authority.</li>
@@ -230,21 +322,21 @@
   <a href="mailto:flxperimentel.contact@gmail.com">flxperimentel.contact@gmail.com</a>
 </p>
 
-<h2>8. Data Security</h2>
+<h2>9. Data Security</h2>
 <p>
-  Since all user data is stored exclusively on your device, the protection of
-  that data depends primarily on the security of your device. We recommend
-  protecting your device with a passcode and keeping iOS up to date.
+  Locally stored data is protected by your device's security mechanisms.
+  We recommend protecting your device with a passcode and keeping iOS up to date.
+  Data transmitted via cloud services (Supabase) is encrypted in transit using TLS.
 </p>
 
-<h2>9. Changes to This Privacy Policy</h2>
+<h2>10. Changes to This Privacy Policy</h2>
 <p>
   We reserve the right to update this privacy policy as needed. You will be
   notified of significant changes within the app. The date of the last update
   is indicated above.
 </p>
 
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 <p>
   For privacy-related inquiries, please contact:<br>
   <a href="mailto:flxperimentel.contact@gmail.com">flxperimentel.contact@gmail.com</a>
